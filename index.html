@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Happy Birthday Yogita ✨</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:#090617;color:#fff;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;background:
+radial-gradient(circle at 20% 20%,#ff4f9a33,transparent 28%),
+radial-gradient(circle at 80% 30%,#8a5cff33,transparent 30%),
+radial-gradient(circle at 50% 90%,#ffb6d933,transparent 35%);z-index:-2}
+canvas{position:fixed;inset:0;pointer-events:none;z-index:20}
+section{min-height:100vh;padding:70px 20px;display:flex;align-items:center;justify-content:center;position:relative}
+.card{width:min(900px,100%);background:#ffffff0d;border:1px solid #ffffff1c;border-radius:30px;padding:34px;backdrop-filter:blur(14px);box-shadow:0 20px 70px #0008}
+.hero{text-align:center}
+.kicker{letter-spacing:5px;text-transform:uppercase;color:#ffd0e7;font-size:12px}
+h1{font-size:clamp(52px,13vw,120px);margin:15px 0;background:linear-gradient(90deg,#fff,#ffb6d9,#d8c5ff,#fff);-webkit-background-clip:text;color:transparent}
+h2{font-size:clamp(34px,7vw,62px);margin-bottom:20px}
+p{font-family:Arial,sans-serif;line-height:1.8;color:#eee;font-size:17px}
+.btn{display:inline-block;margin-top:28px;padding:15px 25px;border-radius:999px;border:1px solid #ffffff33;background:#ffffff12;color:white;text-decoration:none;font-family:Arial,sans-serif;cursor:pointer;box-shadow:0 0 30px #ff65a533}
+.btn:hover{background:#ffffff22;transform:translateY(-2px)}
+.float{position:absolute;font-size:35px;animation:float 4s ease-in-out infinite}
+.f1{top:12%;left:8%}.f2{top:25%;right:8%;animation-delay:1s}.f3{bottom:14%;left:12%;animation-delay:2s}.f4{bottom:20%;right:12%;animation-delay:3s}
+@keyframes float{50%{transform:translateY(-18px) rotate(8deg)}}
+.note{font-size:20px;text-align:center}
+.note strong{color:#ffd0e7}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:28px}
+.tile{padding:25px;border-radius:22px;background:linear-gradient(145deg,#ffffff15,#ffffff07);border:1px solid #ffffff18;min-height:180px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;transition:.4s}
+.tile:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 20px 45px #ff4f9a22}
+.icon{font-size:45px;margin-bottom:12px}
+.shayari{font-size:19px!important;font-family:Georgia,serif!important;font-style:italic}
+.memory{height:260px;position:relative;overflow:hidden;background:linear-gradient(135deg,#ff8fc533,#9d7cff33)}
+.memory:before{content:"";position:absolute;inset:18px;border:1px solid #ffffff35;border-radius:18px}
+.memory .orb{width:115px;height:115px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#ff9ec9 20%,#8d6cff 65%,#171027);box-shadow:0 0 50px #ff75b7aa;filter:saturate(1.2)}
+.memory span{font-family:Arial,sans-serif;margin-top:15px;color:#ddd}
+.reveal{display:none;margin-top:25px;padding:25px;border-radius:22px;background:#ff5eaa15;border:1px solid #ff9acb44}
+.reveal.show{display:block;animation:appear .7s ease}
+@keyframes appear{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+.footer{text-align:center;padding:50px 20px;color:#aaa;font-family:Arial,sans-serif}
+.small{font-size:13px;color:#aaa}
+.music-toggle{position:fixed;right:18px;bottom:18px;z-index:50;border:1px solid #ffffff30;background:linear-gradient(135deg,#ff5eaa,#8d6cff);color:#fff;padding:13px 18px;border-radius:999px;font:bold 14px Arial,sans-serif;cursor:pointer;box-shadow:0 10px 35px #0008;backdrop-filter:blur(10px)}
+.music-toggle:hover{transform:translateY(-2px);box-shadow:0 14px 40px #0009}
+#yt-player{position:fixed;width:1px;height:1px;left:-10px;bottom:-10px;opacity:.01;pointer-events:none}
+</style>
+</head>
+<body>
+<canvas id="fx"></canvas>
+<button id="musicBtn" class="music-toggle" onclick="toggleMusic()">🎵 Music · OFF</button>
+<div id="yt-player"></div>
+
+<section>
+<div class="float f1">✨</div><div class="float f2">💗</div><div class="float f3">🌸</div><div class="float f4">🎈</div>
+<div class="card hero">
+<div class="kicker">A little surprise made specially for you</div>
+<h1>Yogita</h1>
+<p>Today isn't just another date on the calendar…<br>it's a day worth celebrating. 🎂</p>
+<button class="btn" onclick="scrollToId('wish')">Open Your Surprise ✨</button>
+</div>
+</section>
+
+<section id="wish">
+<div class="card">
+<div class="kicker">Chapter 01 · Birthday Wish</div>
+<h2>Happy Birthday, Yogita 🎂</h2>
+<p class="note">Wishing you a day filled with <strong>smiles, beautiful moments, good luck and happiness</strong>. May this new year of your life bring you countless reasons to smile and memories you'll always want to keep. 🌸</p>
+<div style="text-align:center"><button class="btn" onclick="scrollToId('shayari')">Read Something Special 💌</button></div>
+</div>
+</section>
+
+<section id="shayari">
+<div class="card">
+<div class="kicker">Chapter 02 · Shayari</div><h2>For Your Birthday 🌙</h2>
+<div class="grid">
+<div class="tile"><div class="icon">🌷</div><p class="shayari">“Khushiyon se bhara rahe har ek pal tumhara,<br>hamesha hasta rahe ye chehra pyara.”</p></div>
+<div class="tile"><div class="icon">✨</div><p class="shayari">“Dua hai har naya savera nayi khushi laaye,<br>har shaam tumhare chehre par ek smile chhod jaaye.”</p></div>
+<div class="tile"><div class="icon">🎂</div><p class="shayari">“Birthday tumhara hai, celebration bhi tumhara,<br>bas har saal aur bhi khoobsurat ho ye din tumhara.”</p></div>
+<div class="tile"><div class="icon">💗</div><p class="shayari">“Teri smile dekh kar dil ko sukoon sa milta hai,<br>tu khush rahe bas itna hi dil chahta hai.”</p></div>
+<div class="tile"><div class="icon">🌙</div><p class="shayari">“Kuch log zindagi mein special ban jaate hain,<br>aur tum unmein se ho jo dil mein reh jaate hain.”</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="card">
+<div class="kicker">Chapter 03 · Little Things</div><h2>What I Wish For You 💫</h2>
+<div class="grid">
+<div class="tile"><div class="icon">😊</div><h3>Lots of Smiles</h3><p>Har din mein koi na koi reason to smile mile.</p></div>
+<div class="tile"><div class="icon">🌸</div><h3>Beautiful Moments</h3><p>Aise moments jo baad mein favourite memories ban jaayein.</p></div>
+<div class="tile"><div class="icon">⭐</div><h3>Big Dreams</h3><p>Jo bhi dream ho, usse chase karne ka confidence mile.</p></div>
+<div class="tile"><div class="icon">💖</div><h3>True Happiness</h3><p>Waisi khushi jo kisi special reason ki mohtaj na ho.</p></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="card">
+<div class="kicker">Chapter 04 · AI Memory Gallery</div><h2>Little Birthday Memories 📸</h2>
+<p style="text-align:center">Real photos nahi hain, isliye maine yahan dreamy AI-style memory cards rakhe hain. Baad mein tum apni photos se replace kar sakte ho.</p>
+<div class="grid">
+<div class="tile memory"><div class="orb"></div><span>Dreamy Birthday ✨</span></div>
+<div class="tile memory"><div class="orb" style="transform:scale(.8);filter:hue-rotate(45deg)"></div><span>Beautiful Moments 🌸</span></div>
+<div class="tile memory"><div class="orb" style="transform:scale(1.15);filter:hue-rotate(100deg)"></div><span>Keep Smiling 💫</span></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="card">
+<div class="kicker">Chapter 05 · A Few More Things 💗</div><h2>Just For You ✨</h2>
+<div class="grid">
+<div class="tile"><div class="icon">🌟</div><h3>You Deserve It</h3><p>Har woh khushi jo tum kisi aur ke liye wish karti ho, woh tumhe bhi mile.</p></div>
+<div class="tile"><div class="icon">🦋</div><h3>Keep Growing</h3><p>Life ke har new chapter mein tum aur zyada shine karo.</p></div>
+<div class="tile"><div class="icon">🎁</div><h3>Unexpected Joy</h3><p>Aise surprises milte rahein jo bina reason ke smile de jaayein.</p></div>
+<div class="tile"><div class="icon">💫</div><h3>Main Character</h3><p>Apni story mein hamesha khud ko choose karna mat bhoolna.</p></div>
+</div>
+<div style="text-align:center;margin-top:25px"><button class="btn" onclick="burstHearts()">Send You Some Love 💖</button></div>
+</div>
+</section>
+
+<section>
+<div class="card hero">
+<div class="kicker">One Last Surprise</div>
+<h2>There’s a little message for you… 💝</h2>
+<button class="btn" onclick="document.getElementById('secret').classList.add('show');this.style.display='none'">Tap to Reveal ✨</button>
+<div id="secret" class="reveal">
+<p class="note"><strong>Yogita,</strong><br><br>
+I hope your birthday is as wonderful as the happiness you bring into the lives of people around you. Keep smiling, keep shining, and never stop believing in yourself. 🌙✨<br><br>
+Once again… <strong>Happy Birthday! 🎂💗</strong><br><br>
+— <strong>Tarash</strong>
+</p>
+</div>
+</div>
+</section>
+
+<div style="text-align:center;padding:20px"><button class="btn" onclick="openHeeriye()">▶️ Play Heeriye on YouTube</button><p class="small" style="margin-top:10px">The ON/OFF button plays a built-in romantic melody, so it works even when YouTube is blocked or still loading.</p></div>
+<div class="footer">Made with ✨ for Yogita · From Tarash<br><span class="small">A birthday page to remember.</span></div>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+let ytPlayer, musicReady=false, musicPlaying=false, audioCtx, masterGain, timer;
+function onYouTubeIframeAPIReady(){
+  ytPlayer=new YT.Player('yt-player',{height:'180',width:'320',videoId:'RLzC55ai0eo',playerVars:{autoplay:0,controls:0,playsinline:1,rel:0,modestbranding:1},events:{onReady:function(){musicReady=true;}}});
+}
+function startAmbient(){
+  audioCtx=audioCtx||new (window.AudioContext||window.webkitAudioContext)();
+  if(audioCtx.state==='suspended') audioCtx.resume();
+  masterGain=audioCtx.createGain(); masterGain.gain.value=.045; masterGain.connect(audioCtx.destination);
+  const notes=[261.63,329.63,392,329.63,293.66,349.23,440,349.23]; let i=0;
+  function play(){ if(!musicPlaying) return; const o=audioCtx.createOscillator(),g=audioCtx.createGain(); o.type='sine';o.frequency.value=notes[i++%notes.length];g.gain.setValueAtTime(0,audioCtx.currentTime);g.gain.linearRampToValueAtTime(.7,audioCtx.currentTime+.08);g.gain.exponentialRampToValueAtTime(.001,audioCtx.currentTime+1.1);o.connect(g);g.connect(masterGain);o.start();o.stop(audioCtx.currentTime+1.15); timer=setTimeout(play,700); }
+  play();
+}
+function stopAmbient(){if(timer) clearTimeout(timer); if(masterGain){masterGain.gain.cancelScheduledValues(audioCtx.currentTime);masterGain.gain.setTargetAtTime(0,audioCtx.currentTime,.08);}}
+function toggleMusic(){
+  const btn=document.getElementById('musicBtn');
+  musicPlaying=!musicPlaying;
+  if(musicPlaying){ startAmbient(); btn.textContent='🎵 Music · ON'; }
+  else{ stopAmbient(); btn.textContent='🎵 Music · OFF'; }
+}
+function openHeeriye(){window.open('https://www.youtube.com/watch?v=RLzC55ai0eo','_blank','noopener');}
+function burstHearts(){
+  for(let i=0;i<28;i++){const e=document.createElement('div');e.textContent=['💖','💕','✨','🌸'][Math.floor(Math.random()*4)];e.style.position='fixed';e.style.left=(50+(Math.random()-.5)*35)+'vw';e.style.top=(55+(Math.random()-.5)*10)+'vh';e.style.fontSize=(18+Math.random()*22)+'px';e.style.zIndex=60;e.style.pointerEvents='none';document.body.appendChild(e);const dx=(Math.random()-.5)*220,dy=-(50+Math.random()*190);e.animate([{transform:'translate(0,0) scale(1)',opacity:1},{transform:`translate(${dx}px,${dy}px) scale(.4)`,opacity:0}],{duration:2800+Math.random()*1400,easing:'cubic-bezier(.2,.8,.3,1)'}).onfinish=()=>e.remove();}
+}
+function scrollToId(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+const c=document.getElementById('fx'),x=c.getContext('2d');let w,h,parts=[];
+function resize(){w=c.width=innerWidth;h=c.height=innerHeight}resize();addEventListener('resize',resize);
+for(let i=0;i<70;i++)parts.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,s:Math.random()*2+1,v:Math.random()*.5+.15,a:Math.random()*6.28});
+function draw(){x.clearRect(0,0,w,h);for(const p of parts){p.y-=p.v;p.a+=.01;if(p.y<0)p.y=h;x.globalAlpha=.35+Math.sin(p.a)*.25;x.beginPath();x.arc(p.x,p.y,p.s,0,7);x.fillStyle='#fff';x.fill()}requestAnimationFrame(draw)}draw();
+</script>
+<script>
+let ytPlayer, musicReady=false, musicPlaying=false;
+function onYouTubeIframeAPIReady(){
+  ytPlayer=new YT.Player('yt-player',{
+    height:'180',width:'320',videoId:'RLzC55ai0eo',
+    playerVars:{autoplay:0,controls:0,playsinline:1,rel:0,modestbranding:1},
+    events:{onReady:function(){musicReady=true;}}
+  });
+}
+function toggleMusic(){
+  const btn=document.getElementById('musicBtn');
+  if(!musicReady){btn.textContent='🎵 Loading…'; return;}
+  if(musicPlaying){ytPlayer.pauseVideo(); musicPlaying=false; btn.textContent='🎵 Heeriye · OFF';}
+  else{ytPlayer.playVideo(); musicPlaying=true; btn.textContent='⏸️ Heeriye · ON';}
+}
+function scrollToId(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+const c=document.getElementById('fx'),x=c.getContext('2d');let w,h,parts=[];
+function resize(){w=c.width=innerWidth;h=c.height=innerHeight}resize();addEventListener('resize',resize);
+for(let i=0;i<70;i++)parts.push({x:Math.random()*innerWidth,y:Math.random()*innerHeight,s:Math.random()*2+1,v:Math.random()*.5+.15,a:Math.random()*6.28});
+function draw(){x.clearRect(0,0,w,h);for(const p of parts){p.y-=p.v;p.a+=.01;if(p.y<0)p.y=h;x.globalAlpha=.35+Math.sin(p.a)*.25;x.beginPath();x.arc(p.x,p.y,p.s,0,7);x.fillStyle='#fff';x.fill()}requestAnimationFrame(draw)}draw();
+</script>
+</body>
+</html>
