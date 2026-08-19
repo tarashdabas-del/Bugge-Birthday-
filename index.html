@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>For Yogita 💖 | A Birthday Surprise</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;color:#fff;background:#08020c;font-family:system-ui,-apple-system,Segoe UI,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background:
+radial-gradient(circle at 15% 20%,#ff4f9a30 0 2px,transparent 3px),
+radial-gradient(circle at 85% 65%,#ffd7eb22 0 2px,transparent 3px),
+linear-gradient(135deg,#17041b,#05020a 55%,#170719)}
+body:after{content:"";position:fixed;inset:0;z-index:-2;background:linear-gradient(#08020c66,#08020c99),url("assets/couple.png") center/cover no-repeat;opacity:.42}
+#particles{position:fixed;inset:0;pointer-events:none;z-index:50;overflow:hidden}
+.particle{position:absolute;bottom:-50px;animation:rise linear forwards;opacity:.85}
+@keyframes rise{to{transform:translate3d(var(--x),-115vh,0) rotate(360deg);opacity:0}}
+nav{position:sticky;top:0;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:13px 5%;background:#09030dd9;backdrop-filter:blur(14px);border-bottom:1px solid #ff72b735}
+nav strong{font-size:20px;color:#ffafd2}.music{border:1px solid #ff7db4;background:#ff4f9a1c;color:#fff;padding:9px 15px;border-radius:25px;cursor:pointer}
+.hero{min-height:92vh;display:grid;place-items:center;text-align:center;padding:60px 20px;position:relative}
+.heroBox{max-width:900px}
+.kicker{color:#ffafd2;letter-spacing:2px}
+h1{font-size:clamp(45px,10vw,100px);line-height:.95;margin:18px 0;color:#ffc0dc;text-shadow:0 0 12px #ff4f9a,0 0 40px #ff4f9a55}
+.hero p{max-width:700px;margin:20px auto;font-size:18px;line-height:1.7;color:#ffe8f2}
+.btn{border:0;border-radius:30px;padding:13px 24px;margin:8px;background:linear-gradient(90deg,#ff4f9a,#ff8cbd);color:#fff;font-weight:800;cursor:pointer;box-shadow:0 0 25px #ff4f9a55;transition:.25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 35px #ff4f9a88}
+section{max-width:1150px;margin:auto;padding:70px 6%}
+.title{text-align:center;color:#ffb0d2;font-size:34px;margin:0 0 14px;text-shadow:0 0 16px #ff4f9a55}
+.lead{text-align:center;color:#f9dce9;line-height:1.7;margin:0 auto 30px;max-width:750px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+.card{background:linear-gradient(145deg,#1b0b1fcc,#0d0611dd);border:1px solid #ff7bb355;border-radius:22px;padding:24px;box-shadow:0 15px 45px #0008;backdrop-filter:blur(10px)}
+.card h3{color:#ffafd1;margin-top:0}.card p{line-height:1.65;color:#f8dfeb}
+.locked{opacity:.45}.locked button{cursor:not-allowed}
+.quote{font-family:Georgia,serif;font-style:italic;font-size:19px;color:#ffe7f1;line-height:1.9}
+.shayari{border-left:3px solid #ff72ad}
+.shayari p{white-space:pre-line;font-family:Georgia,serif;font-size:17px}
+.cakeWrap{text-align:center;background:#16091bdd;border:1px solid #ff7ab466;border-radius:28px;padding:35px}
+.cake{font-size:105px;display:inline-block;filter:drop-shadow(0 0 18px #ff74aa);animation:breathe 1.8s ease-in-out infinite}
+@keyframes breathe{50%{transform:scale(1.07)}}
+.hidden{display:none!important}
+.bigMessage{font-size:19px;line-height:1.9;text-align:center;color:#ffe6f0}
+.gift{font-size:95px;cursor:pointer;display:inline-block;animation:gift 1.6s infinite}
+@keyframes gift{50%{transform:translateY(-10px) rotate(2deg)}}
+.final{border:1px solid #ff7ab4;background:linear-gradient(145deg,#210b1d,#0d0610);text-align:center}
+footer{text-align:center;padding:40px;color:#ffb2d3}
+@media(max-width:600px){section{padding:55px 5%}.hero{min-height:80vh}nav strong{font-size:17px}}
+</style>
+</head>
+<body>
+<div id="particles"></div>
+
+<nav>
+  <strong>For Yogita 🌸</strong>
+  <button class="music" onclick="toggleMusic()">🎵 Music <span id="musicText">OFF</span></button>
+</nav>
+
+<section class="hero" id="home">
+ <div class="heroBox">
+  <div class="kicker">✨ A little surprise, made just for you ✨</div>
+  <h1>Happy Birthday<br>Yogita 💖</h1>
+  <p>
+   Aaj ka din sirf birthday nahi... ek chhoti si journey hai,
+   jisme har clue ke peeche ek smile, ek shayari aur ek surprise chhupa hai. 🌸
+  </p>
+  <button class="btn" onclick="start()">🎁 Start The Surprise</button>
+  <button class="btn" onclick="document.getElementById('message').scrollIntoView({behavior:'smooth'})">💌 Read My Message</button>
+ </div>
+</section>
+
+<section id="message">
+ <h2 class="title">💖 A Birthday Message For You</h2>
+ <div class="card bigMessage">
+  <p>
+   Yogita, aaj tumhare birthday par bas itna kehna hai ki
+   tumhari smile jitni simple hai, utni hi special bhi. 🌷
+  </p>
+  <p>
+   Zindagi ke har naye saal ke saath tumhari life mein
+   aur zyada khushiyan, beautiful memories, success aur
+   woh saari cheezein aayein jo tum dil se chahti ho. ✨
+  </p>
+  <p>
+   Kabhi kisi difficult day par ye page dobara kholna,
+   aur yaad rakhna — duniya mein kahin na kahin
+   tumhari smile ko special samajhne wali ek wajah zaroor hai. ❤️
+  </p>
+  <p><b>Happy Birthday, Yogita! 🎂💐</b><br>
+   Keep smiling, keep shining, and never stop being you. 💕
+  </p>
+ </div>
+</section>
+
+<section id="shayari">
+ <h2 class="title">🌸 Tumhare Liye Kuch Shayariyan</h2>
+ <div class="grid">
+  <div class="card shayari"><h3>01 · Muskurahat</h3>
+   <p>“Teri muskurahat ka koi jawab nahi,
+   khushiyon se bhara rahe tera har pal sahi.
+   Jis din tu hasti hai dil se,
+   lagta hai khoobsurat hai duniya bhi wahi.” 💖</p>
+  </div>
+  <div class="card shayari"><h3>02 · Birthday Wish</h3>
+   <p>“Phoolon se mehke tera har savera,
+   sitaron se roshan ho tera basera.
+   Jo maange tu dil se, woh mil jaye,
+   birthday par ho khushiyon ka pehra.” 🌸</p>
+  </div>
+  <div class="card shayari"><h3>03 · Special</h3>
+   <p>“Kuch log milkar yaad ban jaate hain,
+   kuch pal dil ke paas reh jaate hain.
+   Tum unhi khoobsurat logon mein se ho,
+   jinke hone se din khaas ban jaate hain.” ✨</p>
+  </div>
+  <div class="card shayari"><h3>04 · Dua</h3>
+   <p>“Har raasta tera aasaan ho,
+   har khwaab tera mehmaan ho.
+   Khushiyan tere kadmon mein aayein,
+   aur har din tera ek naya armaan ho.” 💕</p>
+  </div>
+  <div class="card shayari"><h3>05 · Last One</h3>
+   <p>“Na chaand chahiye, na sitare hazaar,
+   bas tumhari smile rahe yunhi barkaraar.
+   Birthday tumhara hai, dua meri,
+   khush raho tum har din, har baar.” 🥰</p>
+  </div>
+ </div>
+</section>
+
+<section id="hunt">
+ <h2 class="title">🎁 Birthday Treasure Hunt</h2>
+ <p class="lead">Har clue complete karo. Agla surprise tabhi unlock hoga. 😏</p>
+ <div class="grid">
+  <div class="card" id="c1"><h3>🌸 Clue 1</h3><p>Jahan flowers bloom hote hain, wahi se kahani shuru hoti hai...</p><button class="btn" onclick="unlock(1)">Open</button></div>
+  <div class="card locked" id="c2"><h3>📸 Clue 2</h3><p>Ab ek memory dhoondo jo smile laati hai.</p><button class="btn" disabled onclick="unlock(2)">Locked</button></div>
+  <div class="card locked" id="c3"><h3>🎵 Clue 3</h3><p>Ek awaaz tumhara wait kar rahi hai. Music ko suno.</p><button class="btn" disabled onclick="unlock(3)">Locked</button></div>
+  <div class="card locked" id="c4"><h3>🎂 Clue 4</h3><p>Birthday cake ke bina kahani adhuri hai.</p><button class="btn" disabled onclick="unlock(4)">Locked</button></div>
+  <div class="card locked" id="c5"><h3>🎁 Final Clue</h3><p>Last surprise tumhare bilkul saamne hai.</p><button class="btn" disabled onclick="unlock(5)">Locked</button></div>
+ </div>
+</section>
+
+<section id="cake">
+ <h2 class="title">🎂 Cake Cutting</h2>
+ <div class="cakeWrap">
+  <div class="cake">🎂</div>
+  <p class="lead">Make a wish... ✨ Then tap the button to cut your birthday cake!</p>
+  <button class="btn" onclick="cutCake()">🕯️ Blow Candles & Cut Cake</button>
+  <div id="cakeDone" class="bigMessage hidden">🎉 Candles gone... cake cut! 🎉<br><br>
+   May every wish you made today find its way to you. 💖
+  </div>
+ </div>
+</section>
+
+<section>
+ <h2 class="title">💞 One More Little Surprise</h2>
+ <div class="grid">
+  <div class="card quote"><p>“Some people make ordinary moments feel extraordinary. Today is your day, so let it be as beautiful as your smile.” 🌙</p></div>
+  <div class="card quote"><p>“Aaj ka rule simple hai: no stress, extra smiles, lots of cake, and unlimited happiness.” 🎀</p></div>
+  <div class="card quote"><p>“May this chapter of your life be softer, brighter and filled with moments worth remembering.” ✨</p></div>
+ </div>
+</section>
+
+<section id="final">
+ <h2 class="title">🎁 Your Final Surprise</h2>
+ <div class="card final">
+  <p class="lead">Treasure hunt complete... ab asli gift open karo. 💕</p>
+  <div class="gift" onclick="openGift()">🎁</div>
+  <div id="finalText" class="bigMessage hidden">
+   <h2 style="color:#ffafd2">For You, Yogita ❤️</h2>
+   <p>
+    Is chhote se surprise ka har part tumhari smile ke naam tha. 🌸
+    Aaj se shuru hone wala tumhara naya year beautiful memories,
+    laughter, success aur endless happiness se bhara ho.
+   </p>
+   <p><b>Once again... Happy Birthday, Yogita! 🎂💖</b></p>
+   <p>Stay happy. Stay amazing. Keep smiling. ✨</p>
+  </div>
+ </div>
+</section>
+
+<footer>Made with ❤️ just for Yogita 🌸</footer>
+
+<audio id="music" preload="auto" loop>
+ <source src="music/heriye.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+let level=0;
+const audio=document.getElementById("music");
+
+function start(){
+ document.getElementById("hunt").scrollIntoView({behavior:"smooth"});
+ audio.play().then(()=>document.getElementById("musicText").textContent="ON").catch(()=>{});
+}
+function toggleMusic(){
+ if(audio.paused){audio.play();document.getElementById("musicText").textContent="ON"}
+ else{audio.pause();document.getElementById("musicText").textContent="OFF"}
+}
+function unlock(n){
+ if(n!==level+1)return;
+ level=n;
+ if(n<5){
+   const next=document.getElementById("c"+(n+1));
+   next.classList.remove("locked");
+   const b=next.querySelector("button");
+   b.disabled=false;b.textContent="Open";
+ }
+ if(n===3)audio.play().catch(()=>{});
+ if(n===4)document.getElementById("cake").scrollIntoView({behavior:"smooth"});
+ if(n===5)document.getElementById("final").scrollIntoView({behavior:"smooth"});
+}
+function cutCake(){
+ document.getElementById("cakeDone").classList.remove("hidden");
+ if(level<4)level=4;
+ const c=document.getElementById("c5");
+ c.classList.remove("locked");
+ const b=c.querySelector("button");b.disabled=false;b.textContent="Open Final Gift";
+ burst(70);
+}
+function openGift(){
+ document.getElementById("finalText").classList.remove("hidden");
+ burst(100);
+}
+function burst(n){
+ for(let i=0;i<n;i++){
+  const e=document.createElement("div");
+  e.className="particle";
+  e.textContent=["💖","🌸","✨","💕","🎉","🦋"][Math.floor(Math.random()*6)];
+  e.style.left=Math.random()*100+"vw";
+  e.style.setProperty("--x",(Math.random()*260-130)+"px");
+  e.style.fontSize=(14+Math.random()*24)+"px";
+  e.style.animationDuration=(3+Math.random()*4)+"s";
+  document.getElementById("particles").appendChild(e);
+  setTimeout(()=>e.remove(),7500);
+ }
+}
+setInterval(()=>burst(2),2200);
+</script>
+</body>
+</html>
